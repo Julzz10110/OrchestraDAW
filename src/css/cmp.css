@@ -1,0 +1,114 @@
+.cmp {
+	box-sizing: border-box;
+	display: flex;
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: var( --cmp-text );
+	cursor: pointer;
+	background-color: var( --cmp-bg );
+	filter: brightness( .9 );
+}
+.cmp:nth-child( odd ) {
+	filter: brightness( .85 );
+}
+.cmp.cmp-loaded {
+	filter: none;
+}
+
+/* -------------------------------------------------------------------------- */
+.cmp-save {
+	width: 0;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	background-color: var( --cmp-save-bg );
+	transition: .2s;
+	transition-property: width, color, background-color;
+}
+.cmp-notSaved .cmp-save {
+	width: 30px;
+}
+.cmp-save::before {
+	content: "\f0c7";
+	font-family: "FontAwesome";
+}
+.cmp-save:hover {
+	color: var( --cmp-save-bg );
+	background-color: var( --cmp-text );
+}
+
+/* -------------------------------------------------------------------------- */
+.cmp-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: .5em;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 1em;
+	transition: .2s;
+	transition-property: padding-left, opacity;
+	opacity: .7;
+}
+.cmp-info:hover {
+	padding-left: 1em;
+}
+.cmp-info:hover,
+.cmp-loaded .cmp-info {
+	opacity: 1;
+}
+.cmp-info > div {
+	pointer-events: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+.cmp-name {
+	font-weight: bold;
+}
+.cmp-notSaved .cmp-name::before {
+	content: "*";
+}
+.cmp-name:empty::after {
+	font-style: italic;
+	content: "Безымянный";
+}
+
+/* -------------------------------------------------------------------------- */
+.cmp-duration {
+	margin-right: 1em;
+}
+.cmp-bpm::before,
+.cmp-duration::before {
+	display: inline-block;
+	width: 1.25em;
+	margin-right: .4em;
+	font-family: "FontAwesome";
+	text-align: center;
+}
+.cmp-bpm::before { content: "\f3fd"; }
+.cmp-duration::before { content: "\f017"; }
+
+/* -------------------------------------------------------------------------- */
+.cmp-btn {
+	padding: 0 8px;
+	opacity: .3;
+	font-size: 16px;
+	transition: .2s;
+	transition-property: opacity;
+}
+.cmp-btn:hover {
+	opacity: .8;
+}
+.cmp-btn::before {
+	content: "\f56e";
+	font-family: "FontAwesome";
+}
+.cmp-delete::before {
+	content: "\f308";
+}

@@ -1,0 +1,34 @@
+<div class="popup" id="settingsPopupContent" data-remove>
+	<fieldset>
+		<legend>Настройки DAW</legend>
+		<div class="param">
+			<div class="param-title">Дисплей времени</div>
+			<div class="param-values">
+				<label><input id="settingsInputClockSec" name="clock" type="radio"/> min:sec.ms</label><br/>
+				<label><input id="settingsInputClockBeat" name="clock" type="radio"/> beats:steps.milisteps</label>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Настройки композиции</legend>
+		<div class="param">
+			<div class="param-title">Название</div>
+			<div class="param-values"><input id="settingsInputName" type="text" placeholder="Безымянный"/></div>
+		</div>
+		<div class="param">
+			<div class="param-title">BPM</div>
+			<div class="param-values">
+				<input id="settingsInputBPM" type="number" min="1" max="999"/>
+				<span id="settingsBPMTap" class="btn icon ico-tint"></span>
+			</div>
+		</div>
+		<div class="param">
+			<div class="param-title">Beats per measure</div>
+			<div class="param-values"><input id="settingsInputBeatsPM" type="number" min="1" max="16"/></div>
+		</div>
+		<div class="param">
+			<div class="param-title">Steps per beat</div>
+			<div class="param-values"><input id="settingsInputStepsPB" type="number" min="1" max="16"/></div>
+		</div>
+	</fieldset>
+</div>

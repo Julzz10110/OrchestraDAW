@@ -1,0 +1,142 @@
+#pan-cloud,
+#pan-local {
+	min-height: 118px;
+	height: 200px;
+}
+
+/* ......................................................................... */
+#header {
+	display: flex;
+	align-items: center;
+	height: var( --ctrl-height );
+	padding: 0 10px;
+	border-bottom: 0;
+	color: #fff;
+	font-size: 28px;
+	font-weight: normal;
+	cursor: default;
+	background-color: #444;
+}
+#headerTitle::before {
+	display: block;
+	content: "DAW";
+	font-family: "Oswald";
+}
+#pan-leftside.small #headerTitle::before {
+	content: "DAW";
+}
+
+/* ......................................................................... */
+#userlink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background: no-repeat center;
+	background-size: cover;
+}
+#userlink,
+#logout {
+	margin-left: 10px;
+	cursor: pointer;
+	font-size: 24px;
+	font-family: "FontAwesome";
+	opacity: .5;
+	transition: .2s opacity;
+}
+#userlink.loading,
+#userlink:hover,
+#logout:hover {
+	opacity: .8;
+}
+#userlink::before {
+	content: "\f2bd";
+}
+#app.logged #userlink {
+	opacity: 1;
+	border: 2px solid #222;
+}
+#app.logged #userlink::before {
+	content: "";
+}
+#app #userlink.loading::before {
+	content: "\f3f4";
+	display: inline-block;
+	animation: .7s infinite linear rotate360;
+}
+#app:not( .logged ) #logout {
+	display: none;
+}
+#logout::before {
+	content: "\f08b";
+}
+
+/* ......................................................................... */
+#appGainWrap {
+	width: 4px;
+	height: 35px;
+	align-self: flex-end;
+	margin: 0 0 4px auto;
+	--gsuiSlider-lineColor: #ff9;
+	--gsuiSlider-lineBgColor: #222;
+}
+
+/* ......................................................................... */
+.cmps-menu {
+	display: flex;
+	align-items: center;
+	height: 24px;
+	padding: 0 10px;
+	font-size: 12px;
+	font-weight: bold;
+	border: var( --pan-border );
+	border-width: 1px 0;
+	color: #fff;
+	background-color: #444;
+}
+#pan-local .cmps-menu {
+	border-top: 0;
+}
+.cmps-menu span::before {
+	margin-right: .4em;
+	font-weight: normal;
+	font-family: "FontAwesome";
+}
+#pan-cloud .cmps-menu span::before { content: "\f0c2"; }
+#pan-local .cmps-menu span::before { content: "\f109"; }
+
+#app:not( .logged ) #cloudCmps .panel-placeholder span:first-child,
+#app.logged         #cloudCmps .panel-placeholder span:last-child {
+	display: none;
+}
+
+.cmps-btn {
+	display: inline-flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 6px;
+	margin-left: 6px;
+	color: #ff9;
+	transition: .5s;
+	transition-property: background-color;
+}
+.cmps-btn:hover {
+	color: #505050;
+	background-color: #ff9;
+}
+.cmps-btn::before {
+	font-family: "FontAwesome";
+}
+#newCloudComposition::before { content: "\f067"; }
+#newLocalComposition::before { content: "\f067"; }
+#openLocalComposition::before { content: "\f07c"; }
+.cmps-btn::after {
+	content: attr( data-text );
+	margin-left: .4em;
+}
+#pan-leftside.small .cmps-btn::after {
+	display: none;
+}

@@ -1,0 +1,121 @@
+:root {
+	--app-bg: #555;
+	--monospace: "Inconsolata", "consolas", monospace;
+	--pan-border: 1px solid #333;
+	--gsuiPanels-bd: 2px solid #222;
+	--gsuiPanels-extendSize: 4px;
+	--gsuiPanels-extendColor: #222;
+
+	/* gsuiMixer */
+	/* ..................................................................... */
+	--gsuiMixerChannel-bg: #555;
+	--gsuiMixerChannel-muted-bg: #444;
+	--gsuiMixerChannel-width: 42px;
+	--gsuiMixerChannel-toggle-bg: #ffa;
+	--gsuiMixerChannel-toggleOff-bg: rgba( 255, 255, 255, .1 );
+	--gsuiMixerChannel-toggle-size: 6px;
+	--gsuiMixerChannel-darkBorder: rgba( 0, 0, 0, .1 );
+	--gsuiMixerChannel-lightBorder: rgba( 255, 255, 255, .05 );
+	--gsuiMixerChannel-name-text: #fff;
+	--gsuiMixerChannel-analyser-bg: #222;
+
+	/* gsuiTrack */
+	/* ..................................................................... */
+	--gsuiTrack-bg: #444;
+	--gsuiTrack-bg-mute: #393939;
+	--gsuiTrack-color: #fff;
+	--gsuiTrack-toggle-bg: #ffa;
+	--gsuiTrack-toggleOff-bg: rgba( 255, 255, 255, .1 );
+	--gsuiTrack-row-bg-mute: rgba( 0, 0, 0, .25 );
+	--gsuiTrack-borderTop-color: rgba( 255, 255, 255, .07 );
+	--gsuiTrack-borderBottom-color: rgba( 0, 0, 0, .25 );
+
+	/* gsuiBlocksManager */
+	/* ..................................................................... */
+	--gsuiBlocksManager-grid-bg: #456168;
+	--gsuiBlocksManager-borderColor: #333;
+	--gsuiBlocksManager-side-bgColor: #555;
+	--gsuiBlocksManager-selection-bgColor: rgba( 189, 38, 38, .4 );
+	--gsuiBlocksManager-selection-borderColor: #f44;
+	--gsuiBlocksManager-blockColor: rgba( 85, 170, 204, .8 );
+	--gsuiBlocksManager-blockSelectedColor: rgba( 255, 136, 136, .8 );
+
+	/* gsuiTimeline */
+	/* ..................................................................... */
+	--gsuiTimeline-bg: #222;
+	--gsuiTimeline-color: #fff;
+	--gsuiTimeline-loop-bg: #656586;
+	--gsuiTimeline-cursor-fill: #fdfd70;
+	--gsuiTimeline-loopBorder-bg: #fff;
+
+	/* gsuiSliderGroup */
+	/* ..................................................................... */
+	--gsuiSliderGroup-bg: #456168;
+	--gsuiSliderGroup-currentTime-color: #ff9;
+	--gsuiSliderGroup-slider-width: 6px;
+	--gsuiSliderGroup-slider-bg: rgba( 0, 0, 0, .1 );
+	--gsuiSliderGroup-slider-color: var( --gsuiBlocksManager-blockColor );
+	--gsuiSliderGroup-slider-color-selected: var( --gsuiBlocksManager-blockSelectedColor );
+	--gsuiSliderGroup-loop-color: rgba( 0, 0, 0, .3 );
+
+	/* gsuiKeys */
+	/* ..................................................................... */
+	--gsuiKeys-blackKey-colorA: #111;
+	--gsuiKeys-blackKey-colorB: #444;
+	--gsuiKeys-whiteKey-colorA: #888;
+	--gsuiKeys-whiteKey-colorB: #eee;
+	--gsuiKeys-activeKey-colorA: #353b52;
+	--gsuiKeys-activeKey-colorB: #7886bd;
+
+	/* cmp */
+	/* ..................................................................... */
+	--cmp-bg: #67a;
+	--cmp-text: #fff;
+	--cmp-save-bg: #f44d4d;
+
+	/* history */
+	/* ..................................................................... */
+	--history-action-bg: #454750;
+	--history-action-text: #bbb;
+	--history-actionlight-bg: #67a;
+	--history-actionlightoff-bg: #1a1a1a;
+
+	/* ..................................................................... */
+	--synth-bg: #777;
+	--synth-text: #333;
+	--synth-namebtn-bg: #696;
+	--synth-showbtn-bg: rgba( 0, 0, 0, .1 );
+	--synth-selected-bg: #696;
+	--synth-namehover-text: #7b7;
+	--synth-patterns-bg: rgba( 0, 0, 0, .4 );
+	--synth-patterns-maxHeight: 250px;
+
+	/* ..................................................................... */
+	--pattern-bg: #334;
+	--pattern-text: #5ac;
+	--pattern-height: 64px;
+	--pattern-head-bg: rgba( 0, 0, 0, .2 );
+	--pattern-namebtn-bg: #67a;
+	--pattern-selected-bg: #5ac;
+	--pattern-selected-text: #223;
+	--pattern-head-selected-bg: rgba( 255, 255, 255, .2 );
+
+	/* ..................................................................... */
+	--ctrl-bg: #444;
+	--ctrl-rad: 2px;
+	--ctrl-height: 44px;
+	--ctrl-padding: 4px;
+	--ctrl-play-bg: #67a;
+	--ctrl-stop-bg: #888;
+	--ctrl-about-bg: #ff9;
+	--ctrl-clock-bg: #222;
+	--ctrl-play-text: #ddd;
+	--ctrl-render-bg: #ff9;
+	--ctrl-render-text: #444;
+	--ctrl-clock-text: #ddd;
+	--ctrl-settings-bg: #f44d4d;
+	--ctrl-lightbtn-bg: rgba( 255, 255, 255, .1 );
+	--ctrl-eatcookie-bg: #ff9;
+	--ctrl-toggleplay-bg: #333;
+	--ctrl-clock-unit-opacity: .5;
+}
