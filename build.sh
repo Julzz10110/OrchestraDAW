@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 
 declare -a HEADER=(
@@ -228,3 +229,15 @@ then
 else
 	buildDev
 fi
+=======
+#!/bin/bash
+
+if [[ -z $1 || $1 == "css" ]]; then
+	echo "Compressing CSS...";
+	cd css;
+	tail -n +3 style.scss > _style.scss;
+	node-sass _style.scss style.css;
+	rm _style.scss;
+	cd ..;
+fi
+>>>>>>> c33d2a9c91e13a260a3d4cdce62aab0065f95837
