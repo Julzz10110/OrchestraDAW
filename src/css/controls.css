@@ -1,0 +1,170 @@
+#controls {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	height: var( --ctrl-height );
+	padding: var( --ctrl-padding );
+	background-color: var( --ctrl-bg );
+}
+
+/* .ctrl-item */
+/* -------------------------------------------------------------------------- */
+.ctrl-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	color: var( --ctrl-play-text );
+	height: 100%;
+	border-radius: var( --ctrl-rad );
+	cursor: default;
+	transition: filter .1s;
+}
+.ctrl-item + .ctrl-item {
+	margin-left: 6px;
+}
+.ctrl-item:hover {
+	filter: brightness( 1.2 );
+}
+
+/* .ctrl-btn */
+/* -------------------------------------------------------------------------- */
+.ctrl-btn {
+	border: 0;
+	font-size: 14px;
+	min-width: calc( var( --ctrl-height ) - 2 * var( --ctrl-padding ) );
+}
+.ctrl-btn:active {
+	padding-top: 4px;
+	box-shadow: inset 0 3px 0px rgba( 0, 0, 0, .25 );
+}
+
+/* #togglePlay, #play, #stop */
+/* -------------------------------------------------------------------------- */
+#togglePlay {
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 8px;
+	height: 100%;
+}
+#togglePlay::before,
+#togglePlay::after {
+	box-sizing: border-box;
+	content: "";
+	width: 100%;
+	height: 40%;
+	border-radius: var( --ctrl-rad );
+	background-color: var( --ctrl-toggleplay-bg );
+}
+#play,
+#togglePlay.after::after,
+#togglePlay:not( .after )::before {
+	background-color: var( --ctrl-play-bg );
+}
+#stop {
+	background-color: var( --ctrl-stop-bg );
+}
+
+/* #bpm, #clock, #analyser */
+/* -------------------------------------------------------------------------- */
+#bpm,
+#clock {
+	padding: 0 .3em;
+	align-items: baseline;
+	padding-top: 1px;
+	font-family: var( --monospace );
+	font-size: 30px;
+	filter: none;
+	color: var( --ctrl-clock-text );
+	background-color: var( --ctrl-clock-bg );
+}
+#clockSec::before { content: ":"; }
+#clockMs::before { content: "."; }
+#clockMs,
+#bpmText::before {
+	font-size: .5em;
+	opacity: var( --ctrl-clock-unit-opacity );
+}
+#bpmText::before {
+	content: "bpm";
+	margin-left: .5em;
+}
+#analyser {
+	width: 144px;
+	filter: none;
+	background-color: var( --ctrl-clock-bg );
+}
+#analyser .gsuiSpectrum {
+	width: 100%;
+	height: 100%;
+	border-radius: var( --ctrl-rad );
+}
+
+/* #render */
+/* -------------------------------------------------------------------------- */
+#render {
+	font-family: "FontAwesome";
+	background-color: var( --ctrl-render-bg );
+}
+#render::before {
+	content: "\f019";
+	font-size: 1.2em;
+	color: var( --ctrl-render-text );
+}
+
+/* #settings */
+/* -------------------------------------------------------------------------- */
+#settings {
+	margin-right: auto;
+	font-family: "FontAwesome";
+	background-color: var( --ctrl-settings-bg );
+}
+#settings::before {
+	font-size: 1.2em;
+	content: "\f0ad";
+}
+
+/* #eatCookies */
+/* -------------------------------------------------------------------------- */
+#eatCookies {
+	color: #444;
+	border: 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: var( --ctrl-eatcookie-bg );
+}
+#eatCookies .icon {
+	width: auto;
+	margin-right: 6px;
+	font-size: 20px;
+}
+#eatCookies .icon::before {
+	content: "\f563";
+	font-family: "FontAwesome";
+}
+#eatCookies:hover .icon::before {
+	content: "\f564";
+}
+#eatCookies span {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* #shortcuts */
+/* -------------------------------------------------------------------------- */
+#help,
+#about,
+#shortcuts {
+	font-size: 21px;
+	background-color: var( --ctrl-lightbtn-bg );
+}
+
+/* #about */
+/* -------------------------------------------------------------------------- */
+#about {
+	color: var( --ctrl-about-bg );
+}
+#about:hover {
+	color: #444;
+	background-color: var( --ctrl-about-bg );
+}

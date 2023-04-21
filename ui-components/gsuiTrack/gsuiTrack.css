@@ -1,0 +1,97 @@
+:root {
+	--gsuiTrack-duration: .2s;
+	--gsuiTrack-bg: dodgerblue;
+	--gsuiTrack-bg-mute: indianred;
+	--gsuiTrack-row-bg-mute: rgba( 255, 0, 0, .5 );
+	--gsuiTrack-color: yellow;
+	--gsuiTrack-borderTop-color: white;
+	--gsuiTrack-borderBottom-color: black;
+	--gsuiTrack-toggle-bg: tomato;
+	--gsuiTrack-toggleOff-bg: dodgerblue;
+}
+
+.gsuiTrack,
+.gsuiTrack-row {
+	box-sizing: border-box;
+	display: flex;
+	height: 1em;
+	border: 0 solid;
+	border-width: 1px 0;
+	border-top-color: var( --gsuiTrack-borderTop-color );
+	border-bottom-color: var( --gsuiTrack-borderBottom-color );
+	background-color: var( --gsuiTrack-bg );
+}
+.gsuiTrack,
+.gsuiTrack-row,
+.gsuiTrack-toggle::before {
+	transition: background-color var( --gsuiTrack-duration );
+}
+.gsuiTrack-row {
+	position: relative;
+	display: block;
+	background-color: transparent;
+}
+.gsuiTrack-row > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+.gsuiTrack.gsui-mute {
+	--gsuiTrack-bg: var( --gsuiTrack-bg-mute );
+	--gsuiTrack-toggle-bg: var( --gsuiTrack-toggleOff-bg );
+}
+.gsuiTrack-row.gsui-mute {
+	background-color: var( --gsuiTrack-row-bg-mute );
+}
+
+/* .......................................................................... */
+.gsuiTrack-toggle {
+	cursor: pointer;
+	display: flex;
+	min-width: 24px;
+	align-items: center;
+	justify-content: center;
+}
+.gsuiTrack-toggle::before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var( --gsuiTrack-toggle-bg );
+}
+.gsuiTrack-nameWrap {
+	position: relative;
+	flex: 1;
+}
+.gsuiTrack-name {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding-right: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	color: var( --gsuiTrack-color );
+	cursor: default;
+	background-color: transparent;
+}
+.gsui-mute .gsuiTrack-name {
+	opacity: .5;
+}
+.gsuiTrack-name:focus {
+	font-weight: normal;
+}
+
+.gsuiTrack-name::placeholder {
+	color: inherit;
+	font-style: italic;
+	font-weight: normal;
+	opacity: .3;
+}
+.gsuiTrack-name:focus::placeholder {
+	color: transparent;
+}
